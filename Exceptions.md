@@ -1,3 +1,5 @@
+En el siguiente [link](https://github.com/programacion-basica-2-unlam/ejercicios/blob/master/Exceptions.md) estan estos mismos ejercicios en formato un formato continuo mas piola sin saltos de pagina que genera el export a pdf
+
 ### Ejercicio 1
 
 * ¿Cual es la diferencia entre una chequeada y una no chequeada?

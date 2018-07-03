@@ -1,5 +1,8 @@
-# Listas
-###Ejercicio 1
+# Collections
+
+En el siguiente [link](https://github.com/programacion-basica-2-unlam/ejercicios/blob/master/Colllections.md) estan estos mismos ejercicios en formato un formato continuo mas piola sin saltos de pagina que genera el export a pdf
+
+### Ejercicio 1
 
 Crea los assert por cada punto y responde cada pregunta
 
