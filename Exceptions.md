@@ -28,7 +28,6 @@ Basandote en este test crea la clase CalculadoraTest y la clase Calculadora para
 Crea un excepcion no chequeada llamada DivisionPorCeroException 
 refactoriza el metodo dividir de la clase calculadora para que arroje esta nueva excepcion. 
 
-
 ### Ejercicio 4
 
 Crea los test que cubran el siguiente método
