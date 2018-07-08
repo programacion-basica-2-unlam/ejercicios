@@ -40,7 +40,7 @@ public Double calcularArea(){
 
 ```
 /**
-Calcula el perímetro del triangulo utilizando las propiedades base
+Calcula el perímetro del rectangulo utilizando las propiedades base
 y altura
 */
 public Double calcularPerimetro(){
@@ -189,9 +189,8 @@ tiene sobrepeso, la función devuelve un 1. Te recomiendo que uses
 constantes para devolver estos valores.
 
 	2. esMayorDeEdad(): indica si es mayor de edad, devuelve
-un booleano.
-	TIP: Investigar la clase [LocalDateTime](http://www.oracle.com/technetwork/articles/java/jf14-date-time-2125367.html)
-
+un booleano.<br>
+***TIP***: Investigar la clase [LocalDateTime](http://www.oracle.com/technetwork/articles/java/jf14-date-time-2125367.html)
 	
 	3.  getters y setters para todos los propiedades
 	 
@@ -203,7 +202,7 @@ un booleano.
 	4. Si es mayor de edad
 
 
-	
+
 
 ### Ejercicio 
 
@@ -251,9 +250,109 @@ public​ ​class​ ​TestString​ ​{
 
 ### Ejercicio 
 
-Un rectangulo se define como un paralelogramo cuyos cuatro lados forman ángulos rectos entre sí. Un cuadrado es una particularidad del rectangulo donde los cuatro lados son iguales.
-Utilizando el Ejercicio #x extiende la clase Rectangulo y crea la clase 
+Un rectangulo se define como un paralelogramo cuyos cuatro lados forman ángulos rectos entre sí. Un cuadrado es una particularidad del rectangulo donde los cuatro lados son iguales. Utilizandola clase Rectangulo que programaste antes implementa la clase Cuadrado
 
+
+### Ejercicio
+A partir de las clases Polinomio y Monomio te proponemos que modeles las siguientes clases usando Herenecia
+
+1. Función constante. Es un [polinomio] donde su [grado] es 0
+2. Función lineal. Es un [polinomio] donde su [grado] es 1
+3. Función cuadrática. Es un [polinomio] donde su [grado] es 2
+
+[polinomio]:https://es.wikipedia.org/wiki/Polinomio
+[grado]:https://es.wikipedia.org/wiki/Polinomio#Grado_de_un_polinomio
+
+
+```
+/**
+ * Clase que quedela un mononio.
+ * Un monomio es una expresión algebraica en la que se utilizan exponentes naturales de variables literales
+ * que constan de un solo término (si hubiera una suma o una resta sería un binomio),
+ * un número llamado coeficiente
+ * Ejemplo de un monomio
+ *
+ * 4X^2
+ * donde 4 lo llamamos coeficiente y al 2 el exponente
+ */
+public class Monomio {
+
+    /**
+     * El exponente tiene que ser un numero natural (positivo)
+     */
+    private Integer exponente;
+    private Double coeficiente;
+
+    public Monomio(Integer exponente, Double coeficiente) {
+        this.exponente = exponente;
+        this.coeficiente = coeficiente;
+    }
+
+    public Double evaluar(Double x){
+
+        return  coeficiente * Math.pow(x, this.coeficiente);
+    }
+
+}
+```
+
+```
+mport java.util.Arrays;
+import java.util.List;
+
+public class Polinomio {
+
+    private List<Monomio> monomios;
+
+    public Polinomio(Monomio...monomio) {
+
+        this.monomios = Arrays.asList(monomio);
+
+    }
+
+    public Double resolver(Double x){
+
+        Double resultado = 0d;
+
+        for (Monomio unMonomio: monomios) {
+
+            resultado += unMonomio.evaluar(x);
+        }
+
+        return resultado;
+    }
+}
+```
+
+### Ejercicio 
+La Interpretación geométrica de las sumas de Riemann explicada en este 
+[link](https://ekuatio.com/calculo-de-una-integral-definida-por-las-sumas-de-riemann/) es un método para resolver las integrales. 
+Implementa el método ***resolver*** y testea los siguientes casos
+
+* f(x) = x entre 0 y 1 
+* f(x) = x entre 0 y -1
+* f(x) = x^3 entre -1 y 1 
+
+
+```
+public class IntegralRiemann {
+    
+    private Polinomio polinomio;
+
+    public IntegralRiemann(Polinomio polinomio) {
+        this.polinomio = polinomio;
+    }
+    
+    public Double resolver(Integer limiteInferior, Integer limiteSuperior){
+        
+        Double resultado = 0d;
+        
+        //
+        return resultado;
+    }
+}
+
+```
 
 ### Ejercicio
 
