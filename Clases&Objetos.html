@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Objetos101</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Programación Básica 2</h1>
+
+<h2 id="toc_1">Usando Objetos</h2>
+
+<h3 id="toc_2">Ejercicio 1</h3>
+
+<p>Aprendé a usar la clase <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a>, completa el codigo para que los test den verde. </p>
+
+<div><pre><code class="language-none">    @Test
+    public void usandoString() {
+
+          //1.A 
+        //Usando el metodo reverse de proba que el string palindromo se lee igual al derecho que al reves
+        String palindromo = &quot;anita lava la tina&quot;;
+        String palindromoAlReves = &quot;&quot;; //
+
+        assertEquals(palindromo, palindromoAlReves);
+
+         //1.B  
+        String frase = &quot;Do, or do not. There is no try&quot;;
+        String contiene = &quot;There&quot;;
+        String noContiene = &quot;Yoda&quot;;
+
+        //Existe un metodo que sirve para que lo siguiente de verde. ¿Cuál es?
+        assertTrue(...);
+        assertFalse(...);
+
+          //1.C 
+        //E String indiana tiene 18 posiciones, con que metodo podes comprobarlo?
+        String indiana = &quot;Henry Jones Junior&quot;;
+        assertEquals(18, ...);
+
+        //Comproba que 6 es la posicion de la primer i
+        String palabra = &quot;Otorrinolaringólogo&quot;;
+        assertEquals(6, ...);
+
+        // Y que 12 es de la segunda
+        assertEquals(12, ...);
+    }</code></pre></div>
+
+<h3 id="toc_3">Ejercicio 2</h3>
+
+<p>La clase <a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html">LinkedList</a> es una implementacion generica de una lista doblemente enlazada. En el siguiente ejemplo te mostramos como recorrerla y algunos métodos. Investiga como resolver los puntos planteados en el código.
+Ademas te proponemos que pienses mejores nombres para las variables
+otraLista1, otraLista2 y otraLista3</p>
+
+<div><pre><code class="language-none">    @Test
+    public void recorriendoListas() {
+
+        LinkedList&lt;Integer&gt; miLista = new LinkedList&lt;&gt;();
+        miLista.add(10);
+        miLista.add(2);
+        miLista.add(5);
+        miLista.add(7);
+        miLista.add(9);
+        miLista.add(2);
+        miLista.add(100);
+
+        LinkedList&lt;Integer&gt; otraLista = new LinkedList&lt;&gt;();
+        for (Integer unNumero : miLista) {
+
+            otraLista.add(unNumero * 2);
+        }
+
+        //Sin usar el metodo get() comprobá que el primer numero de la lista es 20
+        assertEquals(20, ...);
+
+        LinkedList&lt;Integer&gt; otraLista2 = new LinkedList&lt;&gt;();
+        for (int i = 0; i &lt; miLista.size(); i++) {
+
+            if (miLista.get(i) % 2 == 0) {
+
+                otraLista2.add(miLista.get(i));
+            }
+        }
+        //Sin usar el metodo get() comprobá que el ultimo numero de la lista es 100
+        assertEquals(100, ...);
+
+         //¿Que diferencia existe entre este bloque while y el for anterior?
+        LinkedList&lt;Integer&gt; otraLista3 = new LinkedList&lt;&gt;();
+        Integer j = 0;
+        Integer tamanioLista = miLista.size();
+        while (j &lt; tamanioLista) {
+
+            if (miLista.get(j) &gt; 9) {
+                otraLista3.add(miLista.get(j));
+            }
+        }
+    }
+   </code></pre></div>
+
+<h2 id="toc_4">Clases</h2>
+
+<h3 id="toc_5">Ejercicio 1</h3>
+
+<p>¿Que​ ​pasa​ ​cuando​ ​se​ ​usa​ ​la​ ​palabra​ ​reservada​ ​new?​ </p>
+
+<p>¿Cual es el error en la siguiente linea? </p>
+
+<div><pre><code class="language-none">X alfredoAlcon​ ​=​ ​new​ ​Actor();;</code></pre></div>
+
+<h3 id="toc_6">Ejercicio 2</h3>
+
+<p>Construir la clase Rectangulo </p>
+
+<ul>
+<li>Tiene dos propiedades base y altura (del tipo Double)</li>
+<li>Un constructor con dos parametros </li>
+</ul>
+
+<div><pre><code class="language-none">public Rectangulo(Double base, Double altura){
+    //...
+}
+</code></pre></div>
+
+<ul>
+<li>Un método para calcular el area</li>
+</ul>
+
+<div><pre><code class="language-none">/**
+Calcula el area del triangulo utilizando las propiedades base
+y altura
+*/
+public Double calcularArea(){
+    //...
+}
+</code></pre></div>
+
+<ul>
+<li>Un método para calcular el perimetro</li>
+</ul>
+
+<div><pre><code class="language-none">/**
+Calcula el perímetro del rectangulo utilizando las propiedades base
+y altura
+*/
+public Double calcularPerimetro(){
+    //...
+}</code></pre></div>
+
+<ul>
+<li>Implementa los siguientes Tests</li>
+</ul>
+
+<div><pre><code class="language-none">package​ ​ar.edu.unlam.basica2;
+import​ ​static​ ​org.junit.Assert.*; 
+import​ ​org.junit.Test;
+
+public​ ​class RectanguloTest​ ​{
+
+    @Test
+    public​ ​void​ ​sePuedenCrearRectangulos(){
+        
+        Rectangulo​ ​unRectangulo​ ​=​ ​new​ ​Rectangulo(1.0, 2.0); 
+        assertNotNull(unRectangulo); 
+        
+        Rectangulo​ ​otroRectangulo​ ​=​ ​new​ ​Rectangulo(4.0, 5.0);
+        assertNotNull(otroRectangulo); 
+        
+        }
+    }
+    
+    @Test
+    public​ ​void​ ​elPerimetroDeUnRectanguloDebeSerLaSumaDeSusLados(){
+        
+        Rectangulo​ ​unRectangulo​ ​=​ ​new​ ​Rectangulo(4.0, 2.0); 
+        Double esperado = 12; // 
+        
+        Double acual = unRectangulo.calcularPerimetro();
+        
+        /*
+          El tercer parametro es un delta. Quiere decir que solamente
+          nos van a importar los primeros dos decimales para la           comparacion
+        */
+        assertEquals(esperado, actual, 0.01); 
+        
+        }
+    }
+    
+    @Test
+    public​ ​void​ ​elAreaDeUnRectanguloDebeSerLaBasePorSuAltura(){
+        
+        //
+    }       
+    </code></pre></div>
+
+<h3 id="toc_7">Ejercicio 3</h3>
+
+<p>Dada la siguiente clase</p>
+
+<div><pre><code class="language-none">public class Persona{
+    private String nombre;
+    private String apellido;
+    
+    public Persona(String nombre, String apellido){
+    
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+    
+    public String getNombre(){
+        return this.nombre;
+    }
+    
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public String getApellido(){
+        return this.apellido;
+    }
+    public void setApellido(String apellido){
+        this.apellido = apellido;
+    }
+}</code></pre></div>
+
+<ul>
+<li>Donde se observa el encapsulamiento?</li>
+<li>En el constructor, identificar que es una variable y que es un atributo</li>
+</ul>
+
+<h3 id="toc_8">Ejercicio 4</h3>
+
+<p>Crea una clase llamada Cuenta que tendrá los siguientes atributos: titular y
+saldo, el saldo puede tener decimales.
+El titular será obligatorio y la cantidad es opcional. Crea dos constructores que cumpla lo
+anterior.</p>
+
+<ul>
+<li>Construir los siguientes métodos</li>
+</ul>
+
+<div><pre><code class="language-none">/**
+La cantidad se suma al saldo, si la cantidad
+es negativa el saldo no debe ser afectado
+*/
+public void depositar(Double cantidad){
+    //...
+}</code></pre></div>
+
+<div><pre><code class="language-none">/**
+Restamos cantidad al saldo actual, si la cantidada a retirar
+es mayor que el saldo no se debe afectar el saldo
+*/
+
+public void retirar(Double cantidad){
+    //...
+}</code></pre></div>
+
+<ul>
+<li>¿Que pasa con los setters en este caso?</li>
+</ul>
+
+<h3 id="toc_9">Ejercicio 5</h3>
+
+<p>Crea la clase Persona para que cumpla 
+las siguientes condiciones:</p>
+
+<ul>
+<li><p>Sus atributos son: nombre, fecha de nacimiento, DNI, sexo (H hombre, M mujer), peso y
+altura. No queremos que se accedan directamente a ellos. Piensa que
+modificador de acceso es el más adecuado, también su tipo. Si quieres añadir
+algún atributo puedes hacerlo.</p></li>
+<li><p>Por defecto, todos los atributos menos el DNI serán valores por defecto según
+su tipo (0 números, cadena vacía para String, etc.). Sexo sera hombre por
+defecto, usa una constante para ello.</p></li>
+<li><p>Debe tener los siguientes constructores:</p>
+
+<ol>
+<li>Un constructor por defecto.</li>
+<li>Un constructor con el nombre, edad y sexo, el resto por defecto.</li>
+<li>Un constructor con todos los atributos como parámetro.</li>
+</ol></li>
+<li><p>Los métodos que se implementaran son:</p>
+
+<ol>
+<li><p>calcularIMC(): calculara si la persona esta en su peso ideal (peso en
+kg/(altura^2 en m)), si esta fórmula devuelve un valor menor que
+20, la función devuelve un -1, si devuelve un número entre 20 y 25
+(incluidos), significa que esta por debajo de su peso ideal la función
+devuelve un 0 y si devuelve un valor mayor que 25 significa que
+tiene sobrepeso, la función devuelve un 1. Te recomiendo que uses
+constantes para devolver estos valores.</p></li>
+<li><p>esMayorDeEdad(): indica si es mayor de edad, devuelve
+un booleano.<br>
+<strong><em>TIP</em></strong>: Investigar la clase <a href="http://www.oracle.com/technetwork/articles/java/jf14-date-time-2125367.html">LocalDateTime</a></p></li>
+<li><p>getters y setters para todos los propiedades</p></li>
+</ol></li>
+<li><p>crear los siguientes test:</p>
+
+<ol>
+<li>Comprobar si esta en su peso ideal</li>
+<li>Tiene sobrepeso</li>
+<li>Esta por debajo de su peso ideal</li>
+<li>Si es mayor de edad</li>
+</ol></li>
+</ul>
+
+<h3 id="toc_10">Ejercicio 6</h3>
+
+<p>La clase​ ​Password tiene dos atributos</p>
+
+<ul>
+<li>longitud, por defecto tienen 8 caracteres </li>
+<li>clave, (el string que representa la contraseña) </li>
+</ul>
+
+<p>Un password se considera fuert si tiene:</p>
+
+<ul>
+<li>​+ ​de​ ​2​ ​mayúsculas</li>
+<li>​​+ de​ ​1​ ​minúscula​ ​</li>
+<li><p>​+ de​ ​5​ ​números</p></li>
+<li><p>Los​ ​constructores​ ​serán​ ​los​ ​siguiente:</p>
+
+<ol>
+<li>Un​ ​constructor​ ​por​ ​defecto.</li>
+<li>Un​ ​constructor​ ​con​ ​la​ ​longitud​ ​que​ ​nosotros​ ​le​ ​pasemos.​ ​</li>
+</ol></li>
+<li><p>Los​ ​métodos​ ​que​ ​implementa​ ​serán:</p>
+
+<ol>
+<li>CambiarContraseña</li>
+<li>Método​ ​get​ ​para​ ​la clave​ ​y​ ​longitud.</li>
+</ol></li>
+<li><p>TODO: agregar casos</p></li>
+</ul>
+
+<h3 id="toc_11">Ejercicio 7</h3>
+
+<p>¿Cuál​ ​será​ ​el​ ​resultado​ ​de​ ​ejecutar​ ​el​ ​siguiente​ ​caso​ ​de​ ​prueba​ ​de​ ​JUnit?​ ​¿Por​ ​Qué? </p>
+
+<div><pre><code class="language-none">package​ ​ar.edu.unlam.basica2;
+import​ ​static​ ​org.junit.Assert.*; 
+import​ ​org.junit.Test;
+
+public​ ​class​ ​TestString​ ​{
+
+    @Test
+    public​ ​void​ ​testIgualdadDeObjetos(){
+        
+        String​ ​cadena1​ ​=​ ​new​ ​String(&quot;Cadena&quot;); 
+        String​ ​cadena2​ ​=​ ​new​ ​String(&quot;Cadena&quot;);
+        assertTrue(cadena1​ ​==​ ​cadena2); }
+    }</code></pre></div>
+
+<h3 id="toc_12">Ejercicio 8</h3>
+
+<p>Un rectangulo se define como un paralelogramo cuyos cuatro lados forman ángulos rectos entre sí. Un cuadrado es una particularidad del rectangulo donde los cuatro lados son iguales. Utilizandola clase Rectangulo que programaste antes implementa la clase Cuadrado</p>
+
+<h3 id="toc_13">Ejercicio 9</h3>
+
+<p>A partir de las clases Polinomio y Monomio te proponemos que modeles las siguientes clases usando Herenecia</p>
+
+<ol>
+<li>Función constante. Es un <a href="https://es.wikipedia.org/wiki/Polinomio">polinomio</a> donde su <a href="https://es.wikipedia.org/wiki/Polinomio#Grado_de_un_polinomio">grado</a> es 0</li>
+<li>Función lineal. Es un <a href="https://es.wikipedia.org/wiki/Polinomio">polinomio</a> donde su <a href="https://es.wikipedia.org/wiki/Polinomio#Grado_de_un_polinomio">grado</a> es 1</li>
+<li>Función cuadrática. Es un <a href="https://es.wikipedia.org/wiki/Polinomio">polinomio</a> donde su <a href="https://es.wikipedia.org/wiki/Polinomio#Grado_de_un_polinomio">grado</a> es 2</li>
+</ol>
+
+<div><pre><code class="language-none">/**
+ * Clase que quedela un mononio.
+ * Un monomio es una expresión algebraica en la que se utilizan exponentes naturales de variables literales
+ * que constan de un solo término (si hubiera una suma o una resta sería un binomio),
+ * un número llamado coeficiente
+ * Ejemplo de un monomio
+ *
+ * 4X^2
+ * donde 4 lo llamamos coeficiente y al 2 el exponente
+ */
+public class Monomio {
+
+    /**
+     * El exponente tiene que ser un numero natural (positivo)
+     */
+    private Integer exponente;
+    private Double coeficiente;
+
+    public Monomio(Integer exponente, Double coeficiente) {
+        this.exponente = exponente;
+        this.coeficiente = coeficiente;
+    }
+
+    public Double evaluar(Double x){
+
+        return  coeficiente * Math.pow(x, this.coeficiente);
+    }
+
+}</code></pre></div>
+
+<div><pre><code class="language-none">mport java.util.Arrays;
+import java.util.List;
+
+public class Polinomio {
+
+    private List&lt;Monomio&gt; monomios;
+
+    public Polinomio(Monomio...monomio) {
+
+        this.monomios = Arrays.asList(monomio);
+
+    }
+
+    public Double resolver(Double x){
+
+        Double resultado = 0d;
+
+        for (Monomio unMonomio: monomios) {
+
+            resultado += unMonomio.evaluar(x);
+        }
+
+        return resultado;
+    }
+}</code></pre></div>
+
+<h3 id="toc_14">Ejercicio 10</h3>
+
+<p>La Interpretación geométrica de las sumas de Riemann explicada en este 
+<a href="https://ekuatio.com/calculo-de-una-integral-definida-por-las-sumas-de-riemann/">link</a> es un método para resolver las integrales. 
+Implementa el método <strong><em>resolver</em></strong> y testea los siguientes casos</p>
+
+<ul>
+<li>f(x) = x entre 0 y 1 </li>
+<li>f(x) = x entre 0 y -1</li>
+<li>f(x) = x^3 entre -1 y 1 </li>
+</ul>
+
+<div><pre><code class="language-none">public class IntegralRiemann {
+    
+    private Polinomio polinomio;
+
+    public IntegralRiemann(Polinomio polinomio) {
+        this.polinomio = polinomio;
+    }
+    
+    public Double resolver(Integer limiteInferior, Integer limiteSuperior){
+        
+        Double resultado = 0d;
+        
+        //
+        return resultado;
+    }
+}
+</code></pre></div>
+
+<h3 id="toc_15">Ejercicio 11</h3>
+
+<p>Te​ ​proponemos​ ​realizar​ ​el​ ​modelo​ ​que​ ​permita​ ​representar​ ​distintas​ ​figuras geométricas.
+Para​ ​empezar,​ ​consideremos​ ​las​ ​siguientes:</p>
+
+<ul>
+<li>Circulo</li>
+<li>Rectangulo</li>
+<li>Cuadrado</li>
+<li>Triangulo</li>
+</ul>
+
+<p>​​​​​​​​​​Para​ ​probar​ ​que​ ​las​ ​clases​ ​que​ ​diseñaste​ ​cumplen​ ​con​ ​un​ ​funcionamiento​ ​óptimo,​ ​te sugerimos​ ​desarrollar​ ​los​ ​casos​ ​de​ ​prueba​ ​​ ​que​ ​validen​ ​lo​ ​siguiente:</p>
+
+<ol>
+<li>Verifica​ ​que​ ​a​ ​partir​ ​de​ ​un​ ​mismo​ ​método,​ ​podemos​ ​dibujar​ ​cualquier​ ​figura. Por​ ​el​ ​momento​ ​sólo​ ​te​ ​conviene​ ​hacer​ ​que​ ​el​ ​método​ ​imprima​ ​el​ ​área​ ​y​ ​el​ ​perímetro​ ​de​ ​la figura.</li>
+<li>Verifica​ ​que​ ​podemos​ ​dibujar​ ​un​ ​círculo​ ​con​ ​un​ ​radio​ ​de​ ​10</li>
+<li>Verifica​ ​que​ ​podemos​ ​dibujar​ ​un​ ​rectángulo​ ​con​ ​un​ ​lado​ ​de​ ​10​ ​y​ ​otro​ ​de​ ​5 ​​​​​​​​​​​</li>
+<li>Verifica​ ​que​ ​podemos​ ​dibujar​ ​un​ ​triángulo​ ​con​ ​los​ ​siguientes​ ​lados​ ​(10,​ ​7,7.14)​ ​y​ ​los​ ​los​ ​siguientes​ ​ángulos​ ​(90,​ ​45,​ ​45)</li>
+<li>Chequá​ ​que​ ​no​ ​te​ ​permita​ ​dibujar​ ​un​ ​circulo​ ​con​ ​un​ ​radio​ ​igual​ ​a​ ​-5​​</li>
+<li>​También​ ​deberías​ ​chequear​ ​que​ ​no​ ​te​ ​permita​ ​dibujar​ ​un​ ​rectángulo​ ​con​ ​los lados​ ​10​ ​y​ ​10</li>
+<li>​Fijate​ ​que​ ​no​ ​sea​ ​posible​ ​dibujar​ ​un​ ​triángulo​ ​con​ ​los​ ​lados​ ​(10,​ ​7​ ​y​ ​7.14)​ ​para los​ ​ángulos​ ​​ ​(90,​ ​45,​ ​90)</li>
+<li>Fijate​ ​que​ ​no​ ​sea​ ​posible​ ​dibujar​ ​un​ ​triangulo​ ​con​ ​los​ ​lados​ ​(10,​ ​10,​ ​30)​ ​con​ ​los
+angulos​ ​(45,​ ​90,​ ​45)</li>
+</ol>
+
+<h3 id="toc_16">Ejercicio 12</h3>
+
+<p>Refactorizar el metodo esFuerte() de la clase Password del ejericio x</p>
+
+<div><pre><code class="language-none">public Boolean esFuerte(){
+
+    return this.validadorMayusculas.validar(this.clave) &amp;&amp;
+            this.validadorMinusculas.validar(this.clave) &amp;&amp;
+            this.validadorNumeros.validar(this.clave) &amp;&amp;
+}
+</code></pre></div>
+
+<p>Donde</p>
+
+<ul>
+<li>validadorMayusculas</li>
+<li>validadorMinusculas</li>
+<li>validadorNumeros</li>
+</ul>
+
+<p>Son son instancias de clases que implementan la siguiente interfaz</p>
+
+<div><pre><code class="language-none">public interface ValidadorClave{
+
+    Boolean validar(String clave);
+}
+</code></pre></div>
+
+<h3 id="toc_17">Ejercicio 13</h3>
+
+<p>Crear la clase PasswordBuilder la misma deberia poder ser usada de la siguiente forma</p>
+
+<div><pre><code class="language-none">Password unPassword = new PasswordBuilder()
+                                .clave(&quot;unaClave&quot;)
+                                .agregarValidador(new ValidadorMayusculasValidator(2))
+                                .agregarValidador(new ValidadorMinusculassValidator(1))
+                                .build();
+                        </code></pre></div>
+
+<p>Vas a tener que: </p>
+
+<ul>
+<li>Modificar la clase password para que tenga una lista de validadores</li>
+<li>Modificar el metodo esFuerte() para que itere la lista de validadores y los ejecute+</li>
+<li>Los validadores concretos deber recibir como parametro la cantidad minima aceptada</li>
+</ul>
+
+<h5 id="toc_18">Ejemplo</h5>
+
+<div><pre><code class="language-none">ValidadorMayusculasValidator  validador = new ValidadorMayusculasValidator(2)
+
+/*
+En este caso debe devolver false porque el String que recibe como 
+parametro solo tiene una mayúscula
+*/
+validador.validar(&quot;unClave&quot;)
+</code></pre></div>
+
+
+
+
+</body>
+
+</html>
