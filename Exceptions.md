@@ -66,5 +66,29 @@ throws NotBlankException{
 
 El codigo no compila, tenes que realizar algunos cambios para que lo haga y crear todas las clases que creas necesarias.
 
+```
+public class Persona {
+
+    private Long idCliente;
+    private String nombre;
+
+    public Long getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(Long idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+}
+```
+
 
 

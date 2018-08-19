@@ -443,7 +443,6 @@ validador.validar("unClave")
 ### Ejercicio 
 
 
-
 Posibles ejercicios
 
 Ordenamiento

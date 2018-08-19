@@ -30,7 +30,7 @@ public class ListTest {
         // ¿que pasa en este caso?
         miLista.add(2,2);
 
-        //3. ¿Como probarias lo que paso antes?
+        //3. ¿Como probarias lo que paso anterior?
 
         // ¿que pasa en este caso?
         miLista.remove(8);
