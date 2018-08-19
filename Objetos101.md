@@ -1,5 +1,3 @@
-# Programación Básica 2
-
 ## Usando Objetos 
 
 ### Ejercicio 1
