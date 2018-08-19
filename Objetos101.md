@@ -96,7 +96,7 @@ otraLista1, otraLista2 y otraLista3
 
 ## Clases 
 
-### Ejercicio 
+### Ejercicio 1
 
 ¿Que​ ​pasa​ ​cuando​ ​se​ ​usa​ ​la​ ​palabra​ ​reservada​ ​new?​ 
 
@@ -107,7 +107,7 @@ X alfredoAlcon​ ​=​ ​new​ ​Actor();;
 ```
 
 
-### Ejercicio 
+### Ejercicio 2
 
 Construir la clase Rectangulo 
 
@@ -190,7 +190,7 @@ public​ ​class RectanguloTest​ ​{
 ```
 
 
-### Ejercicio 
+### Ejercicio 3
 
 Dada la siguiente clase
 
@@ -225,7 +225,7 @@ public class Persona{
 * Donde se observa el encapsulamiento?
 * En el constructor, identificar que es una variable y que es un atributo
 
-### Ejercicio 
+### Ejercicio 4
 
 Crea una clase llamada Cuenta que tendrá los siguientes atributos: titular y
 saldo, el saldo puede tener decimales.
@@ -255,7 +255,7 @@ public void retirar(Double cantidad){
 ```
 * ¿Que pasa con los setters en este caso?
 
-### Ejercicio 
+### Ejercicio 5
 
 Crea la clase Persona para que cumpla 
 las siguientes condiciones:
@@ -300,7 +300,7 @@ un booleano.<br>
 
 
 
-### Ejercicio 
+### Ejercicio 6
 
 La clase​ ​Password tiene dos atributos
 
@@ -324,7 +324,7 @@ Un password se considera fuert si tiene:
 * TODO: agregar casos
 
 
-### Ejercicio 
+### Ejercicio 7
 
 ¿Cuál​ ​será​ ​el​ ​resultado​ ​de​ ​ejecutar​ ​el​ ​siguiente​ ​caso​ ​de​ ​prueba​ ​de​ ​JUnit?​ ​¿Por​ ​Qué? 
 
@@ -344,12 +344,12 @@ public​ ​class​ ​TestString​ ​{
 	}
 ```
 
-### Ejercicio 
+### Ejercicio 8
 
 Un rectangulo se define como un paralelogramo cuyos cuatro lados forman ángulos rectos entre sí. Un cuadrado es una particularidad del rectangulo donde los cuatro lados son iguales. Utilizandola clase Rectangulo que programaste antes implementa la clase Cuadrado
 
 
-### Ejercicio
+### Ejercicio 9
 A partir de las clases Polinomio y Monomio te proponemos que modeles las siguientes clases usando Herenecia
 
 1. Función constante. Es un [polinomio] donde su [grado] es 0
@@ -420,7 +420,7 @@ public class Polinomio {
 }
 ```
 
-### Ejercicio 
+### Ejercicio 10
 La Interpretación geométrica de las sumas de Riemann explicada en este 
 [link](https://ekuatio.com/calculo-de-una-integral-definida-por-las-sumas-de-riemann/) es un método para resolver las integrales. 
 Implementa el método ***resolver*** y testea los siguientes casos
@@ -450,7 +450,7 @@ public class IntegralRiemann {
 
 ```
 
-### Ejercicio
+### Ejercicio 11
 
 Te​ ​proponemos​ ​realizar​ ​el​ ​modelo​ ​que​ ​permita​ ​representar​ ​distintas​ ​figuras geométricas.
 Para​ ​empezar,​ ​consideremos​ ​las​ ​siguientes:
@@ -474,7 +474,7 @@ angulos​ ​(45,​ ​90,​ ​45)
 
 
 
-### Ejercicio 
+### Ejercicio 12
 
 Refactorizar el metodo esFuerte() de la clase Password del ejericio x
 
@@ -503,7 +503,7 @@ public interface ValidadorClave{
 
 ```
 
-### Ejercicio 
+### Ejercicio 13
 
 Crear la clase PasswordBuilder la misma deberia poder ser usada de la siguiente forma
 
@@ -534,24 +534,6 @@ parametro solo tiene una mayúscula
 validador.validar("unClave")
 
 ```
-
-
-### Ejercicio 
-
-
-Posibles ejercicios
-
-Ordenamiento
-Metodos de ordenamiento Simples (burbujeo, insersion, seleccion) con un Strategy
-
-Cifrdo
-Implementar tres clases que cifren de distitnas formas
-https://es.wikipedia.org/wiki/Cifrado_cl%C3%A1sico#Cifrado_por_sustituci%C3%B3n
-	
-
-
-Ideas, agregar ejercicios de modelado y de patrones de diseño
-Necesitamos agregar tips que les sirvan para implementar test
 
 
 
