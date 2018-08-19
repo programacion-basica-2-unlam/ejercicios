@@ -1,5 +1,100 @@
 # Programación Básica 2
 
+## Usando Objetos 
+
+### Ejercicio 1
+
+Aprendé a usar la clase [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), completa el codigo para que los test den verde. 
+
+```
+    @Test
+    public void usandoString() {
+
+		  //1.A	
+        //Usando el metodo reverse de proba que el string palindromo se lee igual al derecho que al reves
+        String palindromo = "anita lava la tina";
+        String palindromoAlReves = ""; //
+
+        assertEquals(palindromo, palindromoAlReves);
+
+		 //1.B	
+        String frase = "Do, or do not. There is no try";
+        String contiene = "There";
+        String noContiene = "Yoda";
+
+        //Existe un metodo que sirve para que lo siguiente de verde. ¿Cuál es?
+        assertTrue(...);
+        assertFalse(...);
+
+		  //1.C	
+        //E String indiana tiene 18 posiciones, con que metodo podes comprobarlo?
+        String indiana = "Henry Jones Junior";
+        assertEquals(18, ...);
+
+        //Comproba que 6 es la posicion de la primer i
+        String palabra = "Otorrinolaringólogo";
+        assertEquals(6, ...);
+
+        // Y que 12 es de la segunda
+        assertEquals(12, ...);
+    }
+```
+
+### Ejercicio 2
+
+La clase [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) es una implementacion generica de una lista doblemente enlazada. En el siguiente ejemplo te mostramos como recorrerla y algunos métodos. Investiga como resolver los puntos planteados en el código.
+Ademas te proponemos que pienses mejores nombres para las variables
+otraLista1, otraLista2 y otraLista3
+
+```
+    @Test
+    public void recorriendoListas() {
+
+        LinkedList<Integer> miLista = new LinkedList<>();
+        miLista.add(10);
+        miLista.add(2);
+        miLista.add(5);
+        miLista.add(7);
+        miLista.add(9);
+        miLista.add(2);
+        miLista.add(100);
+
+        LinkedList<Integer> otraLista = new LinkedList<>();
+        for (Integer unNumero : miLista) {
+
+            otraLista.add(unNumero * 2);
+        }
+
+        //Sin usar el metodo get() comprobá que el primer numero de la lista es 20
+        assertEquals(20, ...);
+
+        LinkedList<Integer> otraLista2 = new LinkedList<>();
+        for (int i = 0; i < miLista.size(); i++) {
+
+            if (miLista.get(i) % 2 == 0) {
+
+                otraLista2.add(miLista.get(i));
+            }
+        }
+        //Sin usar el metodo get() comprobá que el ultimo numero de la lista es 100
+        assertEquals(100, ...);
+
+		 //¿Que diferencia existe entre este bloque while y el for anterior?
+        LinkedList<Integer> otraLista3 = new LinkedList<>();
+        Integer j = 0;
+        Integer tamanioLista = miLista.size();
+        while (j < tamanioLista) {
+
+            if (miLista.get(j) > 9) {
+                otraLista3.add(miLista.get(j));
+            }
+        }
+    }
+   
+```
+
+
+## Clases 
 
 ### Ejercicio 
 
@@ -10,6 +105,7 @@
 ```
 X alfredoAlcon​ ​=​ ​new​ ​Actor();;
 ```
+
 
 ### Ejercicio 
 
