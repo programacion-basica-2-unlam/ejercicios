@@ -412,8 +412,8 @@ public void nullElements(){
     mapa.put(1,null);
     
     
-    assertNull(mapa.get(1);
-    assertNull(mapa.get(2;
+    assertNull(mapa.get(1));
+    assertNull(mapa.get(2));
     
 }
 ```
