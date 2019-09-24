@@ -225,7 +225,7 @@ Completa el siguiente test
 
 ```
 @Test
- public void ordenarRectangulosDeMenorAMyorPorSuperfice(){
+ public void ordenarRectangulosDeMenorAMyorPorArea(){
 
         List<Rectangulo>  miLista = new LinkedList<>();
 
@@ -245,9 +245,9 @@ Completa el siguiente test
         Double superficie1 = 0d; 
         Double superficie2 = 0d;
         Double superficie3 = 0d;
-        assertEquals(superficie1, miLista.get(0));
-        assertEquals(superficie2, miLista.get(1));
-        assertEquals(superficie3, miLista.get(2));
+        assertEquals(superficie1, miLista.get(0).calcularArea());
+        assertEquals(superficie2, miLista.get(1).calcularArea());
+        assertEquals(superficie3, miLista.get(2).calcularArea());
 
     }
 ```
