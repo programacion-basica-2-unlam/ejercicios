@@ -208,9 +208,9 @@ Que modificaciones tenes que hacer para que el siguiente test de verde
 
         Collections.sort(miLista);
 
-        assertEquals(10, miLista.get(0));
-        assertEquals(18, miLista.get(1));
-        assertEquals(20, miLista.get(2));
+        assertEquals(10, miLista.get(0).calcularPerimetro());
+        assertEquals(18, miLista.get(1).calcularPerimetro());
+        assertEquals(20, miLista.get(2).calcularPerimetro());
 
     }
 ```
